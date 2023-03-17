@@ -19,7 +19,7 @@ export default function Main() {
   useEffect(fetchData, []);
   return (
     <>
-      <h1 className="header">Laga mat med MAJA. M</h1>
+      <h1 className="header">All recipes</h1>
       <main className="wrapper">
         {recipes.length &&
           recipes.map((recipe) => (
