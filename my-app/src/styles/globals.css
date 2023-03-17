@@ -9,11 +9,21 @@
   gap: 1.5rem;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  margin-bottom: 1rem;
 }
 
 body {
   background-color: #f6eedf;
+}
+
+.searchBar {
+  padding-left: 2rem;
+  margin-top: 1rem;
+}
+
+input {
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
 }
 
 nav {
@@ -65,6 +75,7 @@ nav {
   height: 5rem;
   box-shadow: 0 1px 8px #ddd;
   background: #d63447;
+  margin-top: 2rem;
 }
 
 .footerContent .names {
@@ -76,4 +87,8 @@ nav {
 .footerContent .firstLetter {
   font-weight: bold;
   font-size: larger;
+}
+
+.links a {
+  color: white;
 }
