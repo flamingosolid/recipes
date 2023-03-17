@@ -82,11 +82,13 @@ nav {
   max-width: 500px;
   display: flex;
   justify-content: space-evenly;
+  color: white;
 }
 
 .footerContent .firstLetter {
   font-weight: bold;
   font-size: larger;
+  color: black;
 }
 
 .links a {
