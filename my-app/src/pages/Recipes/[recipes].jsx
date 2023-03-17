@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+
 function Recipe() {
   const [recipeData, setRecipeData] = useState({});
   const router = useRouter();
@@ -17,25 +18,27 @@ function Recipe() {
   };
   useEffect(fetchData, [recipes]);
   return (
-    <div className="pages">
-      <h1>{recipeData.strMeal}</h1>
-      <img src={recipeData.strMealThumb} alt="" />
-      <div className="instructions">
-        <ol>
-          {recipeData.strInstructions &&
-            recipeData.strInstructions
-              .trim()
-              .split(".")
-              .map((el, index) => {
-                if (el) {
-                  return <li key={index}>{el}.</li>;
-                } else {
-                  return;
-                }
-              })}
-        </ol>
+    <>
+      <div className="pages">
+        <h1>{recipeData.strMeal}</h1>
+        <img src={recipeData.strMealThumb} alt="" />
+        <div className="instructions">
+          <ol>
+            {recipeData.strInstructions &&
+              recipeData.strInstructions
+                .trim()
+                .split(".")
+                .map((el, index) => {
+                  if (el) {
+                    return <li key={index}>{el}.</li>;
+                  } else {
+                    return;
+                  }
+                })}
+          </ol>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 export default Recipe;
